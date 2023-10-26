@@ -4,9 +4,16 @@ class box{
     private:
     int l,b,h;
     public:
-    void fucnt(void){
-        
-    };
+        void getlength(void){
+            cout<<l;
+        }
+
+        void getbreadth(void){
+            cout<<b;
+        }
+        void getheight(void){
+            cout<<h;
+        }
 };
 int main(){
     

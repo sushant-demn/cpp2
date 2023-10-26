@@ -1,58 +1,33 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
 using namespace std;
-int some[100];
-class students
+int arr[5];
+void fun2(void)
 {
-  int a;
-  int scores[100];
-  static int count;
-  int b;
-
-public:
-  void chk();
-  void nos(void)
+  for (int i = 0; i < 5; i++)
   {
-    cin >> a;
-  }
-  void getmrk(void);
+    cin >> arr[i];
+  };
 };
-
-int students::count;
-void students::getmrk(void)
+void func2(void)
 {
-  for (int i = 0; i < a; i++)
+}
+void fucn(void)
+{
+  int a = arr[0];
+
+  for (int i = 0; i < 5; i++)
   {
-
-    for (int i = 0; i < 5; i++)
+    if (arr[i] < arr[i + 1])
     {
-      int a;
-      cin >> a;
-      b = b + a;
+      a = arr[i + 1];
     }
-    scores[i] = b;
   }
-}
-void students ::chk(void)
-{
-  for (int i = 0; i < a; i++)
-  { int c = i +1;
-    if (scores[0]<scores[c]){
-      count++;
-    };
-    
-  }
-  cout<<count;
-}
+  cout << a << "\n";
+};
 int main()
 {
+  fun2();
 
-  students kristain;
-  kristain.nos();
-  kristain.getmrk();
-  kristain.chk();
+  fucn();
   return 0;
 }
