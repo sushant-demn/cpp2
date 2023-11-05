@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-class calculator; /*forward declaration for upcoming class*/
+class calculator;   /*forward declaration for upcoming class*/
 class subcalculator /*class to be made as a friend class*/
 {
 private:
@@ -11,7 +11,8 @@ class calculator
 {
 private:
     int a, b;
-    friend int subcalculator ::add(calculator);/*function of other class described as a friend fucntion*/
+    /*declared whole class as a friend*/
+    friend class subcalculator;
 
 public:
     void take(void)
@@ -19,7 +20,7 @@ public:
         cin >> a >> b;
     };
 };
-int subcalculator ::add(calculator o1)/*friend function accessing data of calculator class and being from class subcalculator*/
+int subcalculator ::add(calculator o1) /*friend function accessing data of calculator class and being from class subcalculator*/
 {
     cout << (o1.a + o1.b) << "\n";
     return 0;
@@ -33,3 +34,8 @@ int main()
     calc.add(zero);
     return 0;
 }
+/*
+This code demostrates the function of the friend classes
+friend class concept is similar to the friend function but as here whole class is the friend of the class therefore
+it can access for any function
+*/

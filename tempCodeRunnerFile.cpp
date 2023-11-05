@@ -1,1 +1,1 @@
-egg.get();
+friend class subcalculator;

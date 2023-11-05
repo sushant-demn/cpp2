@@ -1,33 +1,29 @@
 #include <iostream>
 using namespace std;
-int arr[5];
-void fun2(void)
+class one;
+class two
 {
-  for (int i = 0; i < 5; i++)
-  {
-    cin >> arr[i];
+public:
+  void print(one);
+};
+class one
+{
+private:
+  string a;
+  friend class two;
+  public:
+  void take(void){
+cin>>a;
   };
 };
-void func2(void)
-{
+void two :: print(one o1){
+  cout<<o1.a<<" phuck u \n";
 }
-void fucn(void)
-{
-  int a = arr[0];
-
-  for (int i = 0; i < 5; i++)
-  {
-    if (arr[i] < arr[i + 1])
-    {
-      a = arr[i + 1];
-    }
-  }
-  cout << a << "\n";
-};
 int main()
 {
-  fun2();
-
-  fucn();
+one zero;
+zero.take();
+two nigga;
+nigga.print(zero);
   return 0;
 }
