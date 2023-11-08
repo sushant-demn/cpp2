@@ -1,21 +1,20 @@
-# include<iostream>
+#include <iostream>
 using namespace std;
-class box{
-    private:
-    int l,b,h;
-    public:
-        void getlength(void){
-            cout<<l;
-        }
+class box
+{
+private:
+    int l/*length*/= 0;
+    int b/*breadth*/= 0;
+    int h/*height*/ = 0;
 
-        void getbreadth(void){
-            cout<<b;
-        }
-        void getheight(void){
-            cout<<h;
-        }
+public:
+void func(void){
+    cout<<l<<"\n"<<b<<"\n"<<h<<"\n";
+}
 };
-int main(){
-    
+int main()
+{
+box nigga;
+nigga.func();
     return 0;
 }
