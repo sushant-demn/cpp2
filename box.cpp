@@ -3,18 +3,35 @@ using namespace std;
 class box
 {
 private:
-    int l/*length*/= 0;
-    int b/*breadth*/= 0;
-    int h/*height*/ = 0;
+    int l = 0; /*length*/
+    int b = 0; /*breadth*/
+    int h = 0; /*height*/
 
 public:
-void func(void){
-    cout<<l<<"\n"<<b<<"\n"<<h<<"\n";
-}
+    void getlength(void)
+    {
+        cin >> l;
+    }
+    void getbreadth(void)
+    {
+        cin >> b;
+    }
+    void getheight(void)
+    {
+        cin >> h;
+    }
+    int volume(void)
+    {
+        int a = ((l * b) * h);
+        return a;
+    }
 };
 int main()
 {
-box nigga;
-nigga.func();
+    box nigga;
+    nigga.getlength();
+    nigga.getbreadth();
+    nigga.getheight();
+    nigga.volume();
     return 0;
 }

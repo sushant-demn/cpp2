@@ -67,7 +67,13 @@
         "shared_mutex": "cpp",
         "thread": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "any": "cpp",
+        "bit": "cpp",
+        "charconv": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabledIfIncludesResolve"
 }

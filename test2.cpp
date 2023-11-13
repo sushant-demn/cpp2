@@ -1,33 +1,9 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
-#include <iostream>
-#include <algorithm>
+# include<iostream>
 using namespace std;
 
-
-int main() {
-      int a;
-    cin >> a;
-    string usrnm[1000];
-    for (int i = 0; i < a; i++)
-    {
-        cin >> usrnm[i];
-    };
-    for (int i = 0; i < a; i++)
-    {   int b = usrnm[i].length();
-        if (b < 5)
-        {
-            cout<<"Too short: "<<usrnm[i].length()<<"\n";
-        }
-        else{
-            if(i % 2 = 0){
-                cout<<"valid\n";
-            }
-            else{
-
-            }
-        }
-    }   
+int main(){
+    int a ; string b; string arr[10];
+    cin>>a>>b;
+    arr[0] = a + b;
     return 0;
 }
