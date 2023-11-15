@@ -6,21 +6,11 @@ class data
     int b;
 
 public:
-    /*The constructor is the special member fucntion with the same name as the class and is invoked
-    as soon as the object of the class is created
-    •) can be used to initialize any data
-    •) is invoked for every object created 
-    •) should be same name as the class 
-    •) should be written in the puclic section as the function
-    •) they dont have any written type as any other function
-    •) cannot refer to its address
-    */
-    data(void) // constructor created and defined
+    
+    data(int y, int x) /* constructor created and defined, This is a parameterized constructor as it takes arguements to operate*/ 
     {
-        cout << "Whats the first number\n";
-        cin >> a;
-        cout << "Whats the first number\n";
-        cin >> b;
+        a = y;
+        b = x;
     };
     void printdata(void)
     {
@@ -30,7 +20,9 @@ public:
 
 int main()
 {
-    data a;
+    data a(3,6);/*this is a implicit call*/
+    data b = data(8,16); /*This is a explicit call*/
     a.printdata();
+    b.printdata();
     return 0;
 }

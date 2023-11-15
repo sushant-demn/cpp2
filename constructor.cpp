@@ -9,18 +9,16 @@ public:
     /*The constructor is the special member fucntion with the same name as the class and is invoked
     as soon as the object of the class is created
     •) can be used to initialize any data
-    •) is invoked for every object created 
-    •) should be same name as the class 
+    •) is invoked for every object created
+    •) should be same name as the class
     •) should be written in the puclic section as the function
     •) they dont have any written type as any other function
     •) cannot refer to its address
     */
-    data(void) // constructor created and defined
+    data(void) // constructor created and defined, this consturctor is default constructor as it doesnt take any parameters
     {
-        cout << "Whats the first number\n";
-        cin >> a;
-        cout << "Whats the first number\n";
-        cin >> b;
+        a = 50;
+        b = 100;
     };
     void printdata(void)
     {
