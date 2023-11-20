@@ -138,7 +138,7 @@ static void chkemt(int b[9][9]) // checks for empty places at in the 3x3
 0 0 0 | 2 0 0 | 0 0 7
 0 0 5 | 0 8 0 | 6 0 0
 0 0 0 | 0 0 7 | 0 1 0
-
+ 
 
 7 3 6  8 9 5  4 2 1
 5 4 9  7 2 0  3 6 8
