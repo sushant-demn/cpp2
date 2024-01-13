@@ -26,6 +26,16 @@ public:
     };
 };
 
+/*properites 
+* constructor overloading: having multiple constructor for same class but taking diff arguements
+and compiler will decide which to execute on the basis of the arguements given
+*/
+class spatula{
+    public:
+     spatula(int a){
+        cout<<"This is due to the arguement given as a integer "<<a;
+    }
+};
 int main()
 {
     data a;
