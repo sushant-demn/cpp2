@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-1
-=======
- cout<<"For "<<a<<" quad\n";
-                backtrace(b, a);
->>>>>>> 1e50764 (ok sup)
+int gift ::a = 0;
+// int gift ::b = 0;

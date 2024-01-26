@@ -40,7 +40,7 @@ int main(){
     cin>>y;
     cout<<"Rate on the deposited capital: ";
     cin>>r;
-   if (0 <= r)
+   if (1 <= r)
    {
     int c = r;
     bank(d, y, c);

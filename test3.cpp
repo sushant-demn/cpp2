@@ -1,22 +1,57 @@
-# include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
-int function( int a, int b){
-    cout<<"helo";
-    return 0;
+class Book
+{
+
+    public:
+        char name[50];
+        int cost;
+
+        void getdetails();
+
+        void putdetails();
 };
 
-int function2( int a, int b){
-    cout<<"my";
-    return 0;
-};
+void Book::getdetails()
+{
 
-void function3( int a, int b){
-    cout<<"nigga";
-};
-int main(){
-    int a, b, c;
-    cout<<"what is operation u want to do \n";
-    cin>>c;
-    return 0;
+    cout << "Enter Name : ";
+    cin >> name;
+    cout << "Enter Cost : ";
+    cin >> cost;
+
 }
+
+void Book::putdetails()
+{
+
+    cout << name << " ";
+    cout << cost << " ";
+    cout << endl;
+
+}
+
+int main()
+{
+
+    Book bk[100];
+    int n, i;
+
+    cout << "Enter Number of Books - ";
+    cin >> n;
+
+    for(i = 0; i < n; i++){
+        bk[i].getdetails();
+    }
+
+    cout << "Details of Books - " << endl;
+
+    for(i = 0; i < n; i++){
+        bk[i].putdetails();
+    }
+
+    return 0;
+
+}
+
