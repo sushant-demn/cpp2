@@ -2,36 +2,25 @@
 using namespace std;
 class box
 {
-private:
-    int l = 0; /*length*/
-    int b = 0; /*breadth*/
-    int h = 0; /*height*/
+    int l, b, h;
 
 public:
-    void getlength(void)
-    {
-        cin >> l;
-    }
-    void getbreadth(void)
-    {
-        cin >> b;
-    }
-    void getheight(void)
-    {
-        cin >> h;
-    }
-    int volume(void)
-    {
-        int a = ((l * b) * h);
-        return a;
-    }
+    box();
+    void getlength();
+    void getbreadth();
+    void getheight();
 };
+box ::box()
+{
+    cin >> l >> b >> h;
+}
+
+void box :: getlength(){
+    cout<<l<<" ";
+}
 int main()
 {
-    box nigga;
-    nigga.getlength();
-    nigga.getbreadth();
-    nigga.getheight();
-    nigga.volume();
+    box n;
+    n.getlength();
     return 0;
 }

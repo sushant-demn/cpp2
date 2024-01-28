@@ -1,57 +1,24 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
-
-class Book
-{
-
-    public:
-        char name[50];
-        int cost;
-
-        void getdetails();
-
-        void putdetails();
-};
-
-void Book::getdetails()
-{
-
-    cout << "Enter Name : ";
-    cin >> name;
-    cout << "Enter Cost : ";
-    cin >> cost;
-
-}
-
-void Book::putdetails()
-{
-
-    cout << name << " ";
-    cout << cost << " ";
-    cout << endl;
-
-}
 
 int main()
 {
-
-    Book bk[100];
-    int n, i;
-
-    cout << "Enter Number of Books - ";
-    cin >> n;
-
-    for(i = 0; i < n; i++){
-        bk[i].getdetails();
+    vector<int> vec1;
+    int a;
+    cin >> a;
+    for (int i = 0; i < a; i++)
+    {
+        int b;
+        cin >> b;
+        vec1.push_back(b);
     }
 
-    cout << "Details of Books - " << endl;
-
-    for(i = 0; i < n; i++){
-        bk[i].putdetails();
+    int c = 0;
+    for (int i = 0; i < vec1.size(); i++)
+    {
+         c = (c + vec1[i]);
     }
-
+    cout << c;
     return 0;
-
 }
-
