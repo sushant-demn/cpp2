@@ -1,53 +1,47 @@
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <iomanip>
 using namespace std;
 
-int left(int b[100][100], int a)
-{
-    int y = 0;
-    for (int i = 0; i < a; i++)
-    {
-        y = y + b[i][i];
-    }
-
-    return y;
-}
-int right(int b[100][100], int a)
-{
-    int y = 0;
-    int x = a - 1;
-    for (int i = 0; i < a; i++)
-    {
-        y = y + b[i][x];
-        x--;
-    }
-
-    return y;
-}
 int main()
 {
+    float count1 = 0.000000, count2 = 0.000000, count3 = 0.000000;
     int a;
     cin >> a;
-    int arr[100][100];
-
+    int arr[a];
     for (int i = 0; i < a; i++)
     {
-        for (int j = 0; j < a; j++)
-        {
-            cin >> arr[i][j];
-        }
+        cin >> arr[i];
+    };
+for (int i = 0; i < a; i++)
+{
+    if (arr[i]>0)
+    {
+        count1++;
     }
-    // for (int i = 0; i < a; i++)
-    // {
-    //     for (int j = 0; j < a; j++)
-    //     {
-    //         cout<< arr[i][j]<<" ";
-    //     }
-    //     cout<<"\n";
-    // }
-    cout<<right(arr, a) - left(arr, a);
-    // left(arr, a);
-    // right(arr, a);
+    
+}
+for (int i = 0; i < a; i++)
+{
+    if (arr[i]==0)
+    {
+        count2++;
+    }
+    
+}
+for (int i = 0; i < a; i++)
+{
+    if (arr[i]<0)
+    {
+        count3++;
+    }
+    
+}
+count1 = count1 / a;
+count2 = count2 / a;
+count3 = count3 / a;
+cout<<fixed<<setprecision(6)<<count1<<"\n";
+cout<<fixed<<setprecision(6)<<count2<<"\n";
+cout<<fixed<<setprecision(6)<<count3<<"\n";
+
     return 0;
 }
