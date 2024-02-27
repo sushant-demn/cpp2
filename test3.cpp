@@ -1,19 +1,25 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main()
 {
-    string y = "*";
-    vector<int> vec1;
-    for (int i = 0; i < 10; i++)
+    int a;
+    cin >> a;
+    for (int i = 0; i < 6; i++)
     {
-
-        vec1.push_back("*");
+        int b = a + i;
+        cout << b << "\n";
+        if (b % 5 == 0)
+        {
+            cout << "Pass";
+            if ((b - a)<3){
+                a = b;
+                cout<<"\npass2\n"<<a;
+            }
+            
+            break;
+        }
     }
-    cout << vec1 << "\n";
-
-    
 
     return 0;
 }

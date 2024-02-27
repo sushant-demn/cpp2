@@ -1,37 +1,30 @@
 #include <iostream>
-#include <vector>
 using namespace std;
+
 int main()
 {
-    int a, b;
+    int a;
     cin >> a;
     int arr[a];
-
     for (int i = 0; i < a; i++)
     {
         cin >> arr[i];
     }
     for (int i = 0; i < a; i++)
     {
-        if (arr[i] < 40)
+        int c = arr[i];
+        for (int j = 0; j <= 5; j++)
         {
-            continue;
-        }
-        else
-        { //cout<<"pass "<<arr[i];
-            int c = arr[i];
-            for (int i = 0; i < 6; i++)
+            c = arr[i] + j;
+            if (c % 5 == 0)
             {
-                c = c + i;
-                if (c % 5 == 0)
+
+                if (c - arr[i] < 3)
                 {
-                    if ((c - arr[i]) < 3)
+                    if (c >= 40)
                     {
                         arr[i] = c;
-                        continue;
-                        cout<<"pass";
                     }
-                    
                 }
             }
         }
