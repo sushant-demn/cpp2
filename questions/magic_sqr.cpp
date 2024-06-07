@@ -1,3 +1,4 @@
+//https://www.hackerrank.com/challenges/magic-square-forming/problem?isFullScreen=true
 #include <iostream>
 using namespace std;
 bool **ign(int sum[8])
