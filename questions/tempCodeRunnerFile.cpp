@@ -1,39 +1,14 @@
-#include <iostream>
-using namespace std;
-
-int main()
-{
-    int a;
-    cin >> a;
-    int arr[a];
-    for (int i = 0; i < a; i++)
+for (int i = 3; i < 6; i++)
     {
-        cin >> arr[i];
-    }
-    cout << "\n";
-    for (int i = 0; i < a; i++)
-    {
-        int c = arr[i];
-        for (int j = 0; j <= 5; j++)
+        if (sum[i] == 15)
         {
-            c = arr[i] + j;
-            if (c % 5 == 0)
+            for (int j = 0; j < 3; j++)
             {
-
-                if (c - arr[i] < 3)
-                {
-                    if (c >= 40)
-                    {
-                        arr[i] = c;
-                    }
-                }
+                ign[i][j] = false;
             }
         }
+        else
+        {
+            continue;
+        }
     }
-    for (int i = 0; i < a; i++)
-    {
-        cout << arr[i] << "\n";
-    }
-
-    return 0;
-}
