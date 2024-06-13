@@ -3,26 +3,75 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-int pickingNumbers()
+void pickingNumbers(vector<int> vec, int n)
 {
-    return 0;
+    vector<int> vec1, vec2;
+    for (int i = 0; i < n - 1; i++)
+    {
+        int y;
+        vec1.push_back(vec[i]);
+        int x = i + 1;
+        while ((vec[i] == vec[x]) or (vec[x] - vec[i] <= 1))
+        {
+            vec1.push_back(vec[x]);
+            x++;
+        }
+        vec2.push_back(vec1.size());
+        vec1.clear();
+    }
+    for (int i = 0; i < vec2.size(); i++)
+    {
+        for (int j = i; j < vec2.size(); j++)
+        {
+            if (vec2[i] > vec2[j])
+            {
+                int x = vec2[i];
+                vec2[i] = vec2[j];
+                vec2[j] = x;
+            }
+        }
+    }
+    
+    for (int i = 0; i < vec2.size(); i++)
+    {
+        cout<<vec2[i]<<" ";
+    }
+    
+    // return vec2[vec2.size() - 1];
 };
 int main()
 {
     int n;
     cin >> n;
-    vector<int> vec1;
+
+    vector<int> vec, vec1;
     for (int i = 0; i < n; i++)
     {
         int x;
         cin >> x;
-        vec1.push_back(x);
+        vec.push_back(x);
     }
-    for (int i = 0; i < n; i++)
-    {
-        cout<<vec1[i]<<" ";
-    }
-    
 
+    // sorting vector
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = i; j < n; j++)
+    //     {
+    //         if (vec[i] > vec[j])
+    //         {
+    //             int x = vec[i];
+    //             vec[i] = vec[j];
+    //             vec[j] = x;
+    //         }
+    //     }
+    // }
+    // cout<<"sorted array of input: \n";
+    // for (int i = 0; i < vec.size(); i++)
+    // {
+    //     cout<<vec[i]<<" ";
+    // }
+    // cout<<"\n\n\n\n\n\n\n\n";
+    // cout << 
+    pickingNumbers(vec, n);
     return 0;
 }
