@@ -115,7 +115,8 @@ int *plcr(bool ign[3][3], int arr[3][3], int a)
         x[i] = arr[i][a];
     }
     //sort to max
-}
+    return 0;
+};
 int main()
 {
     int arr[3][3] = {0};
