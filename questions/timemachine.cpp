@@ -4,7 +4,7 @@ using namespace std;
 void  dayOfProgrammer(int y){
     if ((y >= 1919) and (y <= 2700))
     {
-        if ((y%4 == 0) and (y % 100 != 0))
+        if (((y%4 == 0) and (y % 100 != 0)) or (y%400 == 0))
         {
             cout<<12.09<<"."<<y;
         }
