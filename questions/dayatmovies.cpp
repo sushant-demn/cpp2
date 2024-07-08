@@ -4,9 +4,15 @@
 #include <vector>
 #include <cmath>
 using namespace std;
-vector<int> beautifulDays(int i, int j, int k)
+bool isWholeNumber(double number)
 {
-    vector<int> btdays;
+    double intPart;
+    double fracPart = modf(number, &intPart);
+    return fracPart == 0.0;
+}
+int beautifulDays(int i, int j, int k)
+{
+    int btdays = 0;
     vector<int> vec;
     for (int x = i; x <= j; x++)
     {
@@ -14,13 +20,27 @@ vector<int> beautifulDays(int i, int j, int k)
     }
     for (int i = 0; i < vec.size(); i++)
     {
+        double x;
         int n = vec[i];
-        int r = 0;
+        double r = 0;
         while (n != 0)
         {
             int x = n % 10;
             r = r * 10 + x;
             n = floor(n / 10);
+        }
+        if (r <= vec[i])
+        {
+            x = vec[i] - r;
+        }
+        else
+        {
+            x = r - vec[i];
+        }
+        double y = x / k;
+        if (isWholeNumber(y))
+        {
+            btdays++;
         }
     }
 
@@ -30,6 +50,7 @@ int main()
 {
     int i, j, k;
     cin >> i >> j >> k;
+    cout << beautifulDays(i, j, k);
 
     return 0;
 }
