@@ -5,18 +5,7 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cin>>n;
-    vector<int> vec;
-    for (int i = 0; i < n; i++)
-    {
-        int x;
-        cin >> x;
-        vec.push_back(x);
-    }
-    for (int i = 0; i < vec.size(); i++)
-    {
-        cout << (vec[i] * 2) * 5 << "\n";
-    }
+    float a = (40.00 / 15.00);
+    cout << a;
     return 0;
 }
