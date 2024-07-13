@@ -34,6 +34,7 @@ void binarysearch(vector<int> vec, int a)
 }
 int main()
 {
+
     vector<int> vec;
     int n, a;
     cout << "Enter element to find: ";
@@ -47,10 +48,12 @@ int main()
         vec.push_back(x);
     }
     binarysearch(vec, a);
+
     return 0;
 }
 
-
 /*
-
+binary seach is method to search and element with in a data set which is already sorted by dividing the
+data into left and right part and comparing the element to be found with the mid element if found the stopping the process or by comparing deciding to continue with
+either left or right part of the data which take less time than linear search
 */
