@@ -81,7 +81,6 @@ void name_sort(struct student s[], int n) // insertions sort based on names of t
     for (int i = 1; i < n; i++)
     {
         char x[30];
-
         strcpy(x, s[i].name);
         int y = s[i].roll;
         float z = s[i].sgpa;
@@ -97,7 +96,6 @@ void name_sort(struct student s[], int n) // insertions sort based on names of t
         s[j + 1].roll = y;
         s[j + 1].sgpa = z;
     }
-    display(s, n);
 }
 int partition(struct student s[], int lb, int ub)
 {
@@ -168,10 +166,38 @@ void sgpa_search(struct student s[], int n)
 }
 void name_search(struct student s[], int n)
 {
+    name_sort(s, n);
     cout << "\n Enter Name to be searched: ";
     char x[30];
     cin >> x;
-    
+    bool flag = false;
+    int l = 0, r = n - 1, m = 0;
+    while (l <= r)
+    {
+        m = (l + r) / 2;
+        if (strcmp(x, s[m].name) == 0)
+        {
+            flag = true;
+            break;
+        }
+        else if (strcmp(x, s[m].name) > 0)
+        {
+            l = m + 1;
+        }
+        else
+        {
+            r = m - 1;
+        }
+    }
+    if (flag == true)
+    {
+        cout << " Sr. No.\tRoll no.\tname\tsgpa\t\n";
+        cout << 1 << "\t" << s[m].roll << "\t" << s[m].name << "\t" << s[m].sgpa << "\n";
+    }
+    else
+    {
+        cout << "\n\nThis name doesnt exist in given data\n\n";
+    }
 }
 void menu(struct student s[], int n)
 {
@@ -183,6 +209,7 @@ void menu(struct student s[], int n)
              << "2]. Sort the data wrt Names (insertion sort)\n"
              << "3]. Sort the data wrt SGPA Score (quick sort)\n"
              << "4]. Search Student with SGPA Score (linear search)\n"
+             << "5]. Search Student with Name (binary search)\n"
              << "6]. Exit the program\n";
         cin >> x;
         switch (x)
@@ -192,6 +219,7 @@ void menu(struct student s[], int n)
             break;
         case 2:
             name_sort(s, n);
+            display(s, n);
             break;
         case 3:
             sgpa_sort(s, 0, n - 1);
@@ -199,6 +227,9 @@ void menu(struct student s[], int n)
             break;
         case 4:
             sgpa_search(s, n);
+            break;
+        case 5:
+            name_search(s, n);
             break;
         default:
             break;
@@ -219,7 +250,6 @@ int main()
         cin >> s[i].roll >> s[i].name >> s[i].sgpa;
     }
     menu(s, n);
-    // name_sort(s, n);
 
     return 0;
 }
