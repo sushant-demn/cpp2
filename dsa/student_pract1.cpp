@@ -253,3 +253,24 @@ int main()
 
     return 0;
 }
+
+
+/*
+sample data
+3  mallory  8.1
+12 kevin  7.3
+8  grace  6.8
+1  john  8.0
+14 alice  7.5
+7  ivan  7.2
+9  heidi  8.4
+10 sus  7.1
+15 carol  6.9
+11 dave  7.7
+5  eve  8.2
+4  bob  7.6
+13 frank  7.0
+6  judy  8.3
+2  laura  7.4
+
+*/
