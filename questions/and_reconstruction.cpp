@@ -42,7 +42,7 @@ int main()
                     if ((vec[vec.size() - 1] & i) == arr[x])
                     {
                         vec.push_back(i);
-                        break;
+                        x++;
                     }
                 }
             }
