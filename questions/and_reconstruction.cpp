@@ -17,35 +17,43 @@ int main()
             cin >> arr[i];
         }
         int x = 0;
-        while (n--)
+        for (int k = 0; k < sizeof(arr) + 1; k++)
         {
-            if (n == n)
+            if (n > 0)
             {
+                bool flag = false;
                 for (int i = 0; i <= 9; i++)
                 {
-                    for (size_t j = 0; j <= 9; j++)
+                    for (int j = 0; j <= 9; j++)
                     {
-                        if ((i & j) == arr[x] and (i and j != arr[x]))
+                        if ((i & j) == arr[x] and (i != j))
                         {
                             vec.push_back(i);
                             vec.push_back(j);
+                            flag == true;
                             break;
+                            n = 0;
                         }
+                    }
+                    if (flag == true)
+                    {
+                        break;
                     }
                 }
                 x++;
             }
-            else
-            {
-                for (int i = 0; i <= 9; i++)
-                {
-                    if ((vec[vec.size() - 1] & i) == arr[x])
-                    {
-                        vec.push_back(i);
-                        x++;
-                    }
-                }
-            }
+
+            // else
+            // {
+            //     for (int i = 0; i <= 9; i++)
+            //     {
+            //         if ((vec[vec.size() - 1] & i) == arr[x])
+            //         {
+            //             vec.push_back(i);
+            //             x++;
+            //         }
+            //     }
+            // }
         }
         for (int i = 0; i < vec.size(); i++)
         {

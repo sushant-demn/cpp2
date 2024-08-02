@@ -1,10 +1,9 @@
 #include <iostream>
+#define print cout << "hello niggas";
 using namespace std;
 
 int main()
 {
-    int result = 3 & 5;
-    // result = result & 3;
-    cout << result;
+    print;
     return 0;
 }
