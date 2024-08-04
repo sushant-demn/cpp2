@@ -5,7 +5,9 @@ using namespace std;
 int main()
 {
     int a, b, c;
+    int x;
     cin >> a >> b >> c;
+    x = ((0.01) * (a * b)) * c;
     int arr[a];
     int count = 0;
     for (int i = 0; i < a; i++)
@@ -17,7 +19,7 @@ int main()
     {
         while (arr[j] < b)
         {
-            if (count < c)
+            if (count < x)
             {
                 arr[j] = arr[j] + 1;
                 count++;
