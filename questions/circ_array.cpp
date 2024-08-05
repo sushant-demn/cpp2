@@ -5,7 +5,7 @@ using namespace std;
 
 void circularArrayRotation(vector<int> a, int k, vector<int> queries)
 {
-    vector<int> crc;
+    int crc[a.size()];
     int inipos = 0;
     while (k > 0)
     {
@@ -20,7 +20,6 @@ void circularArrayRotation(vector<int> a, int k, vector<int> queries)
             k = k - a.size();
         }
     }
-    cout << "inipos" << inipos << "\n";
     for (int i = 0; i < a.size(); i++)
     {
         if (inipos < a.size())
@@ -35,12 +34,10 @@ void circularArrayRotation(vector<int> a, int k, vector<int> queries)
             inipos++;
         }
     }
-    for (int i = 0; i < crc.size(); i++)
+    for (int i = 0; i < queries.size(); i++)
     {
-        cout << crc[i] << " ";
+        cout << crc[queries[i]] << "\n";
     }
-
-    cout << "inipos " << inipos << "\n";
 }
 
 int main()
