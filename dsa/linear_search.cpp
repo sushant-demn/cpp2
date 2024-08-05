@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-void linearsearcj(int a, vector<int> vec)
+void linearsearch(int a, vector<int> vec)
 {
 
     bool flag = false;
