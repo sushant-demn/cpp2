@@ -10,6 +10,7 @@ int main()
     {
         string s;
         cin >> s;
+        bool flag = false;
         if (s.size() == 1)
         {
             char c = static_cast<char>(static_cast<int>(s[0] + 1));
@@ -20,12 +21,19 @@ int main()
             for (int i = 0; i < s.size(); i++)
             {
                 if (s[i] == s[i + 1])
-                {
+                {   
                     char c = static_cast<char>(static_cast<int>(s[i]) + 1);
                     s.insert(s.begin() + i + 1, c);
+                    flag = true;
                     break;
                 }
             }
+            if (flag == false)
+            {
+                char c = static_cast<char>(static_cast<int>(s[0]) + 1);
+                s.insert(s.begin() + 1, c);
+            }
+            
         }
         cout << s << "\n";
     }
