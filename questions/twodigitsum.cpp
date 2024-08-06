@@ -12,7 +12,7 @@ int main()
         int n;
         cin >> n;
 
-        cout << (floor(n / 10)) + (n % 10);
+        cout << (floor(n / 10)) + (n % 10)<<"\n";
     }
 
     return 0;
