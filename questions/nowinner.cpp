@@ -11,7 +11,10 @@ int main()
     {
         int a, b, c, x;
         cin >> a >> b >> c >> x;
-        if (((a + x) == (b + x)) or ((b + x) == (c + x)) or ((a + x) == (x + c)))
+        int ax = a + x;
+        int bx = b + x;
+        int cx = c + x;
+        if ((ax == (b or c)) or (bx == (c or a)) or (cx == (b or a)))
         {
             cout << "YES\n";
         }
