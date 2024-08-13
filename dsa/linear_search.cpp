@@ -35,7 +35,7 @@ int main()
         cin >> x;
         vec.push_back(x);
     }
-    linearsearcj(a, vec);
+    linearsearch(a, vec);
 
     return 0;
 }
