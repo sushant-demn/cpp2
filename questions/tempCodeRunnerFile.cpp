@@ -1,24 +1,45 @@
-// https://www.codechef.com/problems/NOWINNER
-
+// https://www.hackerrank.com/challenges/permutation-equation/problem?isFullScreen=true
 #include <bits/stdc++.h>
 using namespace std;
+int linearsearch(int a, vector<int> vec)
+{
+    for (int i = 0; i < vec.size(); i++)
+    {
+        if (vec[i] == a)
+        {
+            return i;
+            break;
+        }
+    }
+}
+vector<int> permutationEquation(vector<int> arr)
+{
+    // vector<int> vec = arr;
+    vector<int> arr2;
+    for (int i = 1; i <= arr.size(); i++)
+    {
+        arr2.push_back(linearsearch(linearsearch(i, arr), arr));
+    }
+    return arr2;
+}
 
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int n;
+    cin >> n;
+    vector<int> arr;
+    arr.push_back(0);
+    int x;
+    for (int i = 0; i < n; i++)
     {
-        int a, b, c, x;
-        cin >> a >> b >> c >> x;
-        if (((a + x) == (b + x)) or ((b + x) == (c + x)) or ((a + x) == (x + c)))
-        {
-            cout << "YES\n";
-        }
-        else
-        {
-            cout << "NO\n";
-        }
+        cin >> x;
+        // cout << x;
+        arr.push_back(x);
+    }
+    vector<int> result = permutationEquation(arr);
+    for (int i = 0; i < result.size() - 1; i++)
+    {
+        cout << result[i] << "\n";
     }
 
     return 0;
