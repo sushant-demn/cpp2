@@ -1,40 +1,34 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
-// Function to read the matrix from input
-std::vector<std::vector<int>> readMatrix(int rows, int cols) {
-    std::vector<std::vector<int>> matrix(rows, std::vector<int>(cols));
-    for (int i = 0; i < rows; ++i) {
-        std::string line;
-        std::cin >> line;
-        for (int j = 0; j < cols; ++j) {
-            matrix[i][j] = line[j] - '0';  // Convert char '0' or '1' to int 0 or 1
-        }
-    }
-    return matrix;
-}
-
-// Function to print the matrix
-void printMatrix(const std::vector<std::vector<int>>& matrix) {
-    for (const auto& row : matrix) {
-        for (int val : row) {
-            std::cout << val << " ";
-        }
-        std::cout << "\n";
-    }
-    std::cout << "\n";
-}
+#include <bits/stdc++.h>
+using namespace std;
 
 int main() {
-    int rows = 6;  // Number of rows in the matrix
-    int cols = 6;  // Number of columns in the matrix
-
-    std::cout << "Enter the matrix:\n";
-    std::vector<std::vector<int>> matrix = readMatrix(rows, cols);
-
-    std::cout << "Matrix:\n";
-    printMatrix(matrix);
-
-    return 0;
+	// your code goes here
+    int t;
+    cin>>t;
+    while(t--){
+        int ns, nt;
+        string s , t;
+        cin>>ns>>nt>>s>>t;
+        if(ns != nt){
+            std::cout << "No" << std::endl;
+        }
+        else{
+            int x = 0,y = 0;
+            for(int i = 0 ; i < ns; i++){
+                if(s[i] == 'a'){
+                    x++;
+                }
+                if(t[i] == 'a'){
+                    y++;
+                }
+            }
+            if(x==y){
+                cout<<"Yes\n";
+            }
+            else{
+                cout<<"No\n";
+                cout<<x<<" "<<y;
+            }
+        }
+    }
 }
