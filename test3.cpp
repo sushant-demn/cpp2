@@ -1,34 +1,34 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <vector>
+#include <string>
+
+void insertionSort(std::vector<std::string>& arr) {
+    int n = arr.size();
+    for (int i = 1; i < n; ++i) {
+        std::string key = arr[i];
+        int j = i - 1;
+
+        // Compare strings lexicographically (based on ASCII values)
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j]; // Shift element to the right
+            --j;
+        }
+        arr[j + 1] = key; // Place the key at the correct position
+    }
+}
 
 int main() {
-	// your code goes here
-    int t;
-    cin>>t;
-    while(t--){
-        int ns, nt;
-        string s , t;
-        cin>>ns>>nt>>s>>t;
-        if(ns != nt){
-            std::cout << "No" << std::endl;
-        }
-        else{
-            int x = 0,y = 0;
-            for(int i = 0 ; i < ns; i++){
-                if(s[i] == 'a'){
-                    x++;
-                }
-                if(t[i] == 'a'){
-                    y++;
-                }
-            }
-            if(x==y){
-                cout<<"Yes\n";
-            }
-            else{
-                cout<<"No\n";
-                cout<<x<<" "<<y;
-            }
-        }
+    // Array of strings to sort
+    std::vector<std::string> strings = {"banana", "apple", "grape", "cherry", "date"};
+
+    // Sort using insertion sort
+    insertionSort(strings);
+
+    // Print the sorted strings
+    std::cout << "Sorted strings:" << std::endl;
+    for (const auto& str : strings) {
+        std::cout << str << std::endl;
     }
+
+    return 0;
 }

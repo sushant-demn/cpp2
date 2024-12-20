@@ -12,7 +12,7 @@ void triangle(int arr[], int y, int n)
     while (x != y)
     {
 
-        for (int i = 0; i < x-1; i++)
+        for (int i = 0; i < x - 1; i++)
         {
             arr2[i] = arr2[i] + arr2[i + 1];
         }
@@ -25,19 +25,19 @@ void triangle(int arr[], int y, int n)
     cout << "\n";
 }
 int main()
-{
-    int n;
-    cout << "Enter the size of array: ";
-    cin >> n;
-    int arr[n];
-    cout << "Enter the elements of the array: ";
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    for (int i = 1; i < n + 1; i++)
-    {
-        triangle(arr, i , n);
-    }
+{   char a[30]= "123456789";
+    // int n;
+    cout << sizeof(a);
+    // cin >> n;
+    // int arr[n];
+    // cout << "Enter the elements of the array: ";
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+    // for (int i = 1; i < n + 1; i++)
+    // {
+    //     triangle(arr, i, n);
+    // }
     return 0;
 }
