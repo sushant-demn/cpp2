@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void bubblesort(vector<int> vec)
+void bubblesort(vector<int>& vec)
 {
 
     for (int i = 0; i < vec.size(); i++)
@@ -15,11 +15,6 @@ void bubblesort(vector<int> vec)
                 vec[j + 1] = x;
             }
         }
-    }
-    cout << "Sorted data: \n";
-    for (int i = 0; i < vec.size(); i++)
-    {
-        cout << vec[i] << " ";
     }
 }
 int main()
@@ -35,7 +30,11 @@ int main()
         vec.push_back(x);
     }
     bubblesort(vec);
-
+        cout << "Sorted data: \n";
+    for (int i = 0; i < vec.size(); i++)
+    {
+        cout << vec[i] << " ";
+    }
     return 0;
 }
 
