@@ -1,11 +1,19 @@
-#include <iostream>
 #include <bits/stdc++.h>
-#include <vector>
 using namespace std;
 
 int main()
 {
-    float a = (40.00 / 15.00);
-    cout << a;
+    vector<vector<int>> v = {{1, 2, 3},
+                             {4, 5, 6}};
+
+    for (int i = 0; i < v.size(); i++)
+    {
+        for (int j = 0; j < v[i].size(); j++)
+        {
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << "size " << v.size();
     return 0;
 }
