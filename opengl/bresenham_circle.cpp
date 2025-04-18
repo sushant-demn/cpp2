@@ -2,7 +2,7 @@
 #include <math.h>
 #include <cmath>
 #include <iostream>
-   double radians = 45 * M_PI / 180.0;
+double radians = 45 * M_PI / 180.0;
 int centerX, centerY, radiusX, radiusY, radius;
 bool firstClick = false;
 using namespace std;
@@ -61,27 +61,27 @@ void keyboard(unsigned char key, int x, int y)
     case '3':
         glClear(GL_COLOR_BUFFER_BIT);
         glPointSize(5);
-        drawCircle(centerX, centerY, radius*0.9);
+        drawCircle(centerX, centerY, radius * 0.9);
         glColor3f(0.0, 1.66, 0.81);
-        drawCircle(centerX + radius, centerY + radius, radius*0.9);
+        drawCircle(centerX + radius, centerY + radius, radius * 0.9);
         glColor3f(2.52, 1.77, 0.49);
-        drawCircle(centerX - radius, centerY + radius, radius*0.9);
+        drawCircle(centerX - radius, centerY + radius, radius * 0.9);
         glColor3f(2.38, 0.51, 0.78);
-        drawCircle(centerX + radius * 2, centerY, radius*0.9);
+        drawCircle(centerX + radius * 2, centerY, radius * 0.9);
         glColor3f(0.0, 1.29, 2.0);
-        drawCircle(centerX - radius * 2, centerY, radius*0.9);
+        drawCircle(centerX - radius * 2, centerY, radius * 0.9);
         break;
     case '4':
         glClear(GL_COLOR_BUFFER_BIT);
         drawCircle(centerX, centerY, radius);
-        drawCircle(centerX, centerY+radius*1.618, radius*0.618);
-        drawCircle(centerX+(radius*1.618), centerY, radius*0.618);
-        drawCircle(centerX, centerY-radius*1.618, radius*0.618);
-        drawCircle(centerX-radius*1.618, centerY, radius*0.618);
-        drawCircle(centerX+radius*1.618*cos(radians), centerY+radius*1.618*sin(radians), radius*0.618);
-        drawCircle(centerX+radius*1.618*cos(3*radians), centerY+radius*1.618*sin(3*radians), radius*0.618);
-        drawCircle(centerX+radius*1.618*cos(5*radians), centerY+radius*1.618*sin(5*radians), radius*0.618);
-        drawCircle(centerX+radius*1.618*cos(7*radians), centerY+radius*1.618*sin(7*radians), radius*0.618)
+        drawCircle(centerX, centerY + radius * 1.618, radius * 0.618);
+        drawCircle(centerX + (radius * 1.618), centerY, radius * 0.618);
+        drawCircle(centerX, centerY - radius * 1.618, radius * 0.618);
+        drawCircle(centerX - radius * 1.618, centerY, radius * 0.618);
+        drawCircle(centerX + radius * 1.618 * cos(radians), centerY + radius * 1.618 * sin(radians), radius * 0.618);
+        drawCircle(centerX + radius * 1.618 * cos(3 * radians), centerY + radius * 1.618 * sin(3 * radians), radius * 0.618);
+        drawCircle(centerX + radius * 1.618 * cos(5 * radians), centerY + radius * 1.618 * sin(5 * radians), radius * 0.618);
+        drawCircle(centerX + radius * 1.618 * cos(7 * radians), centerY + radius * 1.618 * sin(7 * radians), radius * 0.618);
         break;
     }
 }
